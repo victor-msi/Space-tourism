@@ -3,6 +3,6 @@
     "sass": "^1.69.5"
   },
   "scripts": {
-    "sass:watch": "sass --watch starter-code/sass/main.scss starter-code/css/main.css"
+    "sass:watch": "sass --watch sass/main.scss css/main.css"
   }
 }
