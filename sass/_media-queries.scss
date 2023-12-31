@@ -1,5 +1,5 @@
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) { 
+// Vert snakk devices
+@media (max-width: 575px){
   body{
     background-image: url("../assets/home/background-home-mobile.jpg");
     background-repeat: no-repeat;
@@ -8,8 +8,37 @@
   }  
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+  body{
+    background-image: url("../assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    .explore{
+      background-color: white;
+      color: black;
+      border-radius: 50%;
+      /* width: 8em;
+      height: 15em; */
+
+      span{
+        font-size: 2em;
+      }
+    }
+  }  
+}
+
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
+@media (min-width: 768px) { 
+  body{
+    background-image: url("../assets/home/background-home-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+  }
+ }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {  }
