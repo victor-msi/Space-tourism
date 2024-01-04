@@ -1,70 +1,85 @@
 @media (max-width: 575px) {
   body {
     background-image: url("../assets/home/background-home-mobile.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    color: #fff;
+  }
+  .nav-link {
+    font-size: 3.5vw;
+  }
+  .column-1 {
+    font-size: 4.2vw;
+    text-transform: uppercase;
+    margin-top: 1.8em;
+    opacity: 0.6;
+    letter-spacing: 0.2rem;
+    font-weight: 100;
+    /* border: 1px solid yellow; */
+  }
+  .column-2 {
+    font-size: 22vw;
+    margin-top: 0.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    font-weight: 200;
+    /* border: 1px solid white; */
+  }
+  .column-3 {
+    font-size: 3.6vw;
+    padding: 0 2em;
+    margin-top: 1.8em;
+    line-height: 1.8em;
+    opacity: 0.7;
+    font-weight: 200;
+    /* border: 1px solid red; */
+  }
+  .column-4 {
+    /* margin-top: 13%; */
+    width: 9rem;
+    height: 9rem;
+    background-color: green;
+    padding-top: 0;
+    border-radius: 50%;
+    font-size: 4.5vw;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+  }
+  .column-4 > span {
+    margin: 46%;
+  }
+}
+@media (min-width: 576px) {
+  body {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+    background-size: cover;
+    background-repeat: round;
     color: #fff;
   }
 }
-/* @media (min-width: 768px) { 
-  body{
+@media (min-width: 768px) {
+  /* body{
     background-image: url("../assets/home/background-home-tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-  }
- } */
+  } */
+}
 .space {
   font-size: 5em;
 }
 
 .navbar {
-  margin-top: 0.6em;
+  margin-top: 1.8em;
 }
 
 body {
   width: 100%;
-  height: 100%;
-}
-
-.column-1 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  margin-top: 3em;
-  opacity: 0.6;
-  letter-spacing: 0.2rem;
-  font-weight: 100;
-}
-
-.column-2 {
-  font-size: 4.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.6rem;
-  font-weight: 200;
-}
-
-.column-3 {
-  margin-top: 2.5em;
-  padding: 0 2em;
-  font-size: 0.7rem;
-  line-height: 2em;
-  letter-spacing: 0.1rem;
-  opacity: 0.7;
-  font-weight: 200;
-}
-
-.column-4 {
-  margin-top: 3.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-size: 1rem;
-  line-height: 6.5em;
-  font-weight: 400;
-  background-color: white;
-  color: black;
-  height: 6.8em;
-  width: 7.4em;
-  border-radius: 50%;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=main.css.map */
