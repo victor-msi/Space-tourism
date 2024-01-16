@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Cyan-regular';
+  src: url(/assets/fonts/Cyan-Regular/Cyan-Regular.ttf);
+  font-weight: lighter;
+}
+
+.main-title{
+  font-size: 4vw;
+  /* letter-spacing: .1rem; */
+  color: #C3C9E2;
+}
+
+.main-subtitle{
+  font-size: 19vw;
+  font-family: 'Cyan-regular';
+  letter-spacing: .3rem;
+  color: #FFFEFE;
+}
+
+.description{
+  font-size: 3.5vw;
+  line-height: 1.8em;
+  color: #BCC1DB;
+}
+
+.explore-logo{
+  width: 32vw;
+  height: 30vw;
+  font-size: 3.7vw;
+  letter-spacing: .1rem;
+  background-color: #FFFFFD;
+
+  span{
+    color: #0B0A12;
+  }
+}
+
+@include mobile{
+  .main-title{
+    font-size: 4.6vw;
+  }
+
+  .main-subtitle{
+    font-size: 23vw;
+  }
+
+  .description{
+    font-size: 3.7vw;
+    line-height: 1.6em;
+    /* border: 1px solid white; */
+  }
+}
