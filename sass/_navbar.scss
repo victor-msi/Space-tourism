@@ -1,60 +1,125 @@
 @font-face {
-  font-family: 'uniform';
-  src: url(/assets/fonts/uniform-rnd-excond-regular.otf);
+  font-family: 'Barlow Condensed';
+  src: url(/fonts/BarlowCondensed/BarlowCondensed-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
-.navbar{
-  #logo{
-    width: 8vw;
-    height: 8vw;
-    margin-top: 1.7vh;
-  }
-
-  #hamburger-icon{
-    width: 6vw;
-    height: 4vw;
-    margin-top: 1.7vh;
-  }
-
-  .nav-link{
-    font-size: 2.8vw;
-    /* font-family: 'uniform'; */
-    text-transform: uppercase;
-    /* color: #FBFEFF; */
-    opacity: .8;
-  }
-
-}
-
-@include mobile{
+/* @mixin responsive-rules (){
   .navbar{
-    #logo{
-      width: 8vw;
-      height: 8vw;
-    }    
-    
+    height: 10.5vw;
+
     .offcanvas-body{
       position: absolute;
       top: 0vw;
       right: 0vw;
-      width: 63vw;
-      height: 15vw;
+      width: 60vw;
+      height: 100%;
       background-color: #131522;
             
       .navbar-nav{
         width: 100%;
+        padding-left: 3vw; 
+        padding-right: 3vw;
         text-align: center;
-        align-self: center;
+        align-self: center;       
+      }
+    }
+  }  
+} */
 
+/* @mixin larges-rules{
+  .navbar{
+    top: 35px;
+
+    #logo{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    
+    .offcanvas-body{
+      width: 60vw;
+      opacity: .9;
+    }
+  }
+} */
+
+.navbar{
+  #logo{
+    margin-top: 1.1vh;
+  }
+
+  #hamburger-icon{
+    margin-top: 1.7vh;
+  }
+  
+  .offcanvas{
+    width: 67vw;
+    
+    .nav-link{
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #FFF;
+      cursor: pointer;
+    }
+  }
+}
+
+@include x-large{
+  #logo{
+    position: relative;
+    top: 42px;
+    left: 31px;
+  }
+
+  .offcanvas{
+    right: 150px;
+
+    .offcanvas-body{
+      position: absolute;
+      right: -12px;
+      display: flex;
+      width: 54vw;
+      background-color: rgba(255, 255, 255, .35);
+      height: 6rem;
+
+      .navbar-nav{
+        width: 100%;
+        /* height: 100%; */
+        justify-content: space-evenly;
+        
         .nav-item{
           height: 100%;
-            
+          margin-top: auto;
+          margin-bottom: auto;
+
           .nav-link{
-            font-size: 1.7vw;
+            height: 100%;
+            font-weight: normal;
+            letter-spacing: 3px;
+            line-height: 75px;
+            cursor: pointer;         
           }
         }
       }
     }
+    .nav-link:hover{
+      border-bottom: 3px solid #979797;
+    }
+    
+    .nav-link:focus{
+      border-bottom: 3px solid #FFF;
+    }
   }
 
+  .content{
+    width: 100vw;
+  }
 }
+
+/* @include xx-large{
+  @include responsive-rules();
+  @include larges-rules();
+} */

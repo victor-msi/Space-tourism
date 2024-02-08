@@ -5,12 +5,35 @@
 body{
   width: 100vw;
   height: 100vh;
-  color: #fff;
-  font-size: 16px;
-  box-sizing: border-box;
+  font-size: 16px;  
+  box-sizing: border-box;  
   background-image: url("../assets/home/background-home-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
   background-attachment: fixed;
+}
+
+@include tablet{
+  body{
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+}
+
+@include large{
+  body{
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+}
+
+@include x-large{
+  body{
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
+}
+
+@include xx-large{
+  body{
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
 }
