@@ -1,51 +1,32 @@
+/* @mixin large{
+  @media (min-width: 992px) and (max-width: 1199px) { 
+    @content;
+  }  
+} */
+/* @mixin xx-large{
+  @media (min-width: 1400px) { 
+    @content;
+  }  
+} */
 @font-face {
   font-family: "Barlow Condensed";
   src: url(/fonts/BarlowCondensed/BarlowCondensed-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
-/* @mixin responsive-rules (){
-  .navbar{
-    height: 10.5vw;
-
-    .offcanvas-body{
-      position: absolute;
-      top: 0vw;
-      right: 0vw;
-      width: 60vw;
-      height: 100%;
-      background-color: #131522;
-
-      .navbar-nav{
-        width: 100%;
-        padding-left: 3vw; 
-        padding-right: 3vw;
-        text-align: center;
-        align-self: center;       
-      }
-    }
-  }  
-} */
-/* @mixin larges-rules{
-  .navbar{
-    top: 35px;
-
-    #logo{
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-
-    .offcanvas-body{
-      width: 60vw;
-      opacity: .9;
-    }
-  }
-} */
+.navbar {
+  position: absolute;
+  width: 100%;
+}
 .navbar #logo {
-  margin-top: 1.1vh;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
 }
 .navbar #hamburger-icon {
-  margin-top: 1.7vh;
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
 }
 .navbar .offcanvas {
   width: 67vw;
@@ -60,34 +41,27 @@
 }
 
 @media (min-width: 1200px) {
-  #logo {
-    position: relative;
-    top: 42px;
-    left: 31px;
-  }
-  .offcanvas {
-    right: 150px;
+  .navbar #logo {
+    top: 4.2rem;
+    left: 3.5rem;
   }
   .offcanvas .offcanvas-body {
     position: absolute;
-    right: -12px;
-    display: flex;
+    top: 2.5rem;
+    right: 0;
     width: 54vw;
-    background-color: rgba(255, 255, 255, 0.35);
     height: 6rem;
+    background-color: rgba(255, 255, 255, 0.35);
   }
   .offcanvas .offcanvas-body .navbar-nav {
-    width: 100%;
-    /* height: 100%; */
+    width: 100vw;
     justify-content: space-evenly;
   }
   .offcanvas .offcanvas-body .navbar-nav .nav-item {
-    height: 100%;
     margin-top: auto;
     margin-bottom: auto;
   }
   .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
-    height: 100%;
     font-weight: normal;
     letter-spacing: 3px;
     line-height: 75px;
@@ -99,14 +73,7 @@
   .offcanvas .nav-link:focus {
     border-bottom: 3px solid #FFF;
   }
-  .content {
-    width: 100vw;
-  }
 }
-/* @include xx-large{
-  @include responsive-rules();
-  @include larges-rules();
-} */
 @font-face {
   font-family: "Barlow Condensed";
   src: url(/fonts/BarlowCondensed/BarlowCondensed-Regular.ttf);
@@ -118,27 +85,36 @@
   font-weight: normal;
   font-style: normal;
 }
-.content {
-  margin-top: 20px;
-  /* padding: 0 50%; */
+.home-container {
+  background-image: url("../assets/home/background-home-mobile.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 0 1.8rem 8.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.content .main-title {
+
+.main-title {
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
   font-size: 1rem;
   line-height: 25px;
   letter-spacing: 2.5px;
   color: #d0d6f9;
 }
-.content .main-subtitle {
-  margin: 16px 0;
+
+.main-subtitle {
+  margin: 18px 0;
   font-family: "Bellefair Regular";
   font-size: 80px;
   line-height: 100px;
   color: rgb(255, 255, 255);
 }
-.content .description {
-  font-family: "Barlow Condensed", sans-serif;
+
+.description {
+  font-family: "Bellefair Regular";
   font-size: 15px;
   line-height: 25px;
   color: #d0d6f9;
@@ -172,75 +148,160 @@
     box-shadow: 0 0 0 8rem hsla(0deg, 0%, 100%, 0);
   }
 }
+@media (min-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+}
 @media (min-width: 1200px) {
-  .content {
-    height: 24.3rem;
-    position: absolute;
-    bottom: 13vh;
-  }
-  .content .contenido {
-    height: 100%;
-    display: flex;
+  .home-container {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+    flex-direction: row;
     justify-content: space-around;
-    /* align-content: flex-end; */
+    align-items: flex-end;
+    padding-top: 20%;
   }
-  .content .contenido .main-title {
+  .main-title {
     font-size: 1.75rem;
     text-align: start;
     width: 28.4rem;
   }
-  .content .contenido .main-subtitle {
+  .main-subtitle {
     margin-top: 75px;
     margin-bottom: 58px;
     width: 28.4rem;
     font-size: 9.38rem;
     text-align: start;
   }
-  .content .contenido .description {
+  .description {
+    font-family: "Barlow Condensed", sans-serif;
     width: 28.4rem;
-    font-size: 18px;
+    font-size: 1.3rem;
     text-align: start;
-    line-height: 32px;
-  }
-  .col-explore {
-    margin-top: 120px;
+    line-height: 2rem;
   }
   .col-explore .explore-logo {
     width: 17.1rem;
     height: 17.1rem;
   }
 }
-body {
-  width: 100vw;
-  height: 100vh;
-  font-size: 16px;
-  box-sizing: border-box;
-  background-image: url("../assets/home/background-home-mobile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-attachment: fixed;
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url(/fonts/BarlowCondensed/BarlowCondensed-Regular.ttf);
+  font-weight: normal;
 }
-
-@media (min-width: 768px) and (max-width: 991px) {
-  body {
-    background-image: url("../assets/home/background-home-tablet.jpg");
+@font-face {
+  font-family: "Bellefair Regular";
+  src: url(/fonts/Bellefair-Regular/Bellefair-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@media (max-width: 767px) {
+  .destination-container {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 11em;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  .destination-container h2 {
+    margin-bottom: 1.8em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    color: #FFF;
+  }
+  .destination-container h2 span {
+    opacity: 0.6;
+  }
+  .destination-planet-img > img {
+    width: 10.7rem;
+    height: 10.7rem;
+  }
+  .nav > ul {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15rem;
+  }
+  .nav > ul > li {
+    list-style: none;
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+    color: #D0D6F9;
+    text-transform: uppercase;
+  }
+  h3 {
+    margin-top: 2rem;
+    font-family: "Bellefair Regular";
+    font-size: 3.5rem;
+    color: #FFF;
+    text-align: center;
+    line-height: 1.6rem;
+  }
+  p {
+    height: 8rem;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #d0d6f9;
+    line-height: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #979797;
+  }
+  .description-planet .destination-info {
+    font-family: "Bellefair Regular";
+  }
+  .description-planet .destination-info .info {
+    font-size: 0.9rem;
+    color: #D0D6F9;
+  }
+  .description-planet .destination-info .data {
+    color: #FFF;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
-  body {
-    background-image: url("../assets/home/background-home-tablet.jpg");
+@media (min-width: 768px) {
+  body.destination-moon {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
   }
 }
 @media (min-width: 1200px) {
-  body {
-    background-image: url("../assets/home/background-home-desktop.jpg");
+  body.destination-moon {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
   }
 }
-@media (min-width: 1400px) {
-  body {
-    background-image: url("../assets/home/background-home-desktop.jpg");
-  }
+html {
+  font-size: 16px;
+  line-height: 1.15;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 
+  Depurar elementos CSS fantasmas que causan desplazamientos no deseados
+*/
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
 
 /*# sourceMappingURL=main.css.map */

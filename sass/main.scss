@@ -1,39 +1,27 @@
 @import "media-queries";
 @import "navbar";
-@import "content";
+@import "home";
+@import "destination";
+
+html{
+  font-size: 16px;  
+  line-height: 1.15;
+}
 
 body{
-  width: 100vw;
-  height: 100vh;
-  font-size: 16px;  
-  box-sizing: border-box;  
-  background-image: url("../assets/home/background-home-mobile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
-@include tablet{
-  body{
-    background-image: url("../assets/home/background-home-tablet.jpg");
-  }
+*{
+  box-sizing: border-box; 
 }
 
-@include large{
-  body{
-    background-image: url("../assets/home/background-home-tablet.jpg");
-  }
-}
-
-@include x-large{
-  body{
-    background-image: url("../assets/home/background-home-desktop.jpg");
-  }
-}
-
-@include xx-large{
-  body{
-    background-image: url("../assets/home/background-home-desktop.jpg");
-  }
-}
+/* 
+  Depurar elementos CSS fantasmas que causan desplazamientos no deseados
+*/
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */

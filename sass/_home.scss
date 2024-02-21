@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url(/fonts/BarlowCondensed/BarlowCondensed-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Bellefair Regular';
+  src: url(/fonts/Bellefair-Regular/Bellefair-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.home-container{
+  background-image: url("../assets/home/background-home-mobile.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 0 1.8rem 8.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  line-height: 25px;
+  letter-spacing: 2.5px;
+  color: #d0d6f9;
+}
+
+.main-subtitle{
+  margin: 18px 0;
+  font-family: 'Bellefair Regular';
+  font-size: 80px;
+  line-height: 100px;
+  color: rgb(255, 255, 255);
+}
+
+.description{
+  font-family: 'Bellefair Regular';
+  font-size: 15px;
+  line-height: 25px;
+  color: #d0d6f9;
+}
+
+.col-explore{
+  margin-top: 81px;
+
+  .explore-logo{
+    width: 150px;
+    height: 150px;
+    font-size: 24.3px;
+    animation: beats 1s ease-out infinite;
+    box-shadow: 0 0 0 8rem hsla(0,0%,100%,.3);
+    letter-spacing: .1rem;
+    background-color: #FFFFFD;
+    cursor: pointer;
+  
+    .explore{
+      font-family: 'Bellefair Regular';
+      font-weight: normal;
+      font-size: 20px;
+      color: #000;
+    }
+  }
+}
+
+@keyframes beats {
+  from {box-shadow: 0 0 0 0 hsla(0,0%,100%,.3);}
+  to {box-shadow: 0 0 0 8rem hsla(0,0%,100%,0);}
+}
+
+
+@include tablet{
+  .home-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+}
+
+@include x-large{
+  .home-container{
+    background-image: url("../assets/home/background-home-desktop.jpg");
+    flex-direction: row;    
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-top: 20%;
+  }
+       
+  .main-title{
+    font-size: 1.75rem;
+    text-align: start;
+    width: 28.4rem;
+  }
+
+  .main-subtitle{
+    margin-top: 75px;
+    margin-bottom: 58px;
+    width: 28.4rem;
+    font-size: 9.38rem;
+    text-align: start;
+  }
+
+  .description{
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 28.4rem;
+    font-size: 1.3rem;
+    text-align: start;
+    line-height: 2rem;
+  }
+
+  .col-explore{
+    .explore-logo{
+      width: 17.1rem;
+      height: 17.1rem;
+    }
+  }
+}

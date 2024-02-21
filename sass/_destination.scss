@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url(/fonts/BarlowCondensed/BarlowCondensed-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Bellefair Regular';
+  src: url(/fonts/Bellefair-Regular/Bellefair-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@include mobile{  
+  .destination-container{
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 11em;
+    min-width: 100vw;
+    min-height: 100vh;
+
+    h2{
+      margin-bottom: 1.8em;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: .25rem;
+      color: #FFF;
+
+      span{
+        opacity: .6;
+      }
+    }
+  }
+  
+  .destination-planet-img > img{
+    width: 10.7rem;
+    height: 10.7rem;
+  }
+
+  .nav > ul{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15rem;
+  }
+
+  .nav > ul > li{
+    list-style: none;
+    font-size: 14px;
+    letter-spacing: .15rem;
+    color: #D0D6F9;
+    text-transform: uppercase;
+  }
+  
+  h3{
+    margin-top: 2rem;
+    font-family: 'Bellefair Regular';
+    font-size: 3.5rem;
+    color: #FFF;
+    text-align: center;
+    line-height: 1.6rem;
+  }
+
+  p{
+    height: 8rem;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #d0d6f9;
+    line-height: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #979797;
+  }
+
+  .description-planet{
+    .destination-info{
+      font-family: 'Bellefair Regular';
+      
+      .info{
+        font-size: .9rem;
+        color: #D0D6F9;
+      }
+
+      .data{
+        color: #FFF;
+      }
+    }
+
+  }
+}
+
+@include tablet{
+  body.destination-moon{
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@include x-large{
+  body.destination-moon{
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+}

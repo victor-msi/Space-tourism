@@ -5,54 +5,22 @@
   font-style: normal;
 }
 
-/* @mixin responsive-rules (){
-  .navbar{
-    height: 10.5vw;
+.navbar{  
+  position: absolute;
+  width: 100%;
 
-    .offcanvas-body{
-      position: absolute;
-      top: 0vw;
-      right: 0vw;
-      width: 60vw;
-      height: 100%;
-      background-color: #131522;
-            
-      .navbar-nav{
-        width: 100%;
-        padding-left: 3vw; 
-        padding-right: 3vw;
-        text-align: center;
-        align-self: center;       
-      }
-    }
-  }  
-} */
-
-/* @mixin larges-rules{
-  .navbar{
-    top: 35px;
-
-    #logo{
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-    
-    .offcanvas-body{
-      width: 60vw;
-      opacity: .9;
-    }
-  }
-} */
-
-.navbar{
   #logo{
-    margin-top: 1.1vh;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
   }
 
   #hamburger-icon{
-    margin-top: 1.7vh;
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
   }
-  
+
   .offcanvas{
     width: 67vw;
     
@@ -68,35 +36,31 @@
 }
 
 @include x-large{
-  #logo{
-    position: relative;
-    top: 42px;
-    left: 31px;
+  .navbar{
+    #logo{
+      top: 4.2rem;
+      left: 3.5rem;
+    }
   }
 
   .offcanvas{
-    right: 150px;
-
     .offcanvas-body{
       position: absolute;
-      right: -12px;
-      display: flex;
+      top: 2.5rem;
+      right: 0;
       width: 54vw;
-      background-color: rgba(255, 255, 255, .35);
       height: 6rem;
+      background-color: rgba(255, 255, 255, .35);
 
       .navbar-nav{
-        width: 100%;
-        /* height: 100%; */
+        width: 100vw;
         justify-content: space-evenly;
         
         .nav-item{
-          height: 100%;
           margin-top: auto;
           margin-bottom: auto;
 
           .nav-link{
-            height: 100%;
             font-weight: normal;
             letter-spacing: 3px;
             line-height: 75px;
@@ -113,13 +77,4 @@
       border-bottom: 3px solid #FFF;
     }
   }
-
-  .content{
-    width: 100vw;
-  }
 }
-
-/* @include xx-large{
-  @include responsive-rules();
-  @include larges-rules();
-} */
