@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png"> 
-  <title>Space Tourism Website</title>
+  <title>Destination Moon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   </head>
-<body class="destination-moon">
+<body">
   <!-- Navbar -->
   <header>
     <nav class="navbar navbar-expand-xl navbar-dark">
@@ -49,40 +49,38 @@
     </nav>
   </header>
   
-  <section class="destination-container">
-    <h2 class="text-center"> <!-- style="border: 1px solid white;" -->
+  <section class="destination-container d-flex flex-column justify-content-center align-items-center">
+    <h2> 
       <span>01</span>
       PICK YOUR DESTINATION
     </h2>
-    <div class="container"> <!-- style="border: 1px solid white;" -->
-      <div class="row">
-        <div class="col-lg-5 destination-planet-img text-center">
-          <img src="/assets/destination/image-moon.webp" alt="moon">
-        </div>
-        <div class="col-lg-5 description-planet">
-          <nav class="nav">
-            <ul>
-              <li>Moon</li>
-              <li>Mars</li>
-              <li>Europa</li>
-              <li>Titan</li>  
-            </ul>
-          </nav>
-          <h3>MOON</h3>
-          <p>
-            See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-            regain perspective and come back refreshed. While you’re there, take in some history 
-            by visiting the Luna 2 and Apollo 11 landing sites.
-          </p>
-          <div class="destination-info">
-            <div>
-              <span class="info">Avg. distance</span>
-              <span class="data">384,400 km</span> 
-            </div>
-            <div>
-              <span class="info">Est. travel time</span>
-              <span class="data">3 days</span>
-            </div>
+    <div class="description-planet">
+      <div class="destination-planet-img">
+        <img src="/assets/destination/image-moon.webp" alt="moon">
+      </div>
+      <div class="info-planet">
+        <nav class="nav">
+          <ul>
+            <li><a class="text-decoration-none" href="destination-moon.html">Moon</a></li>
+            <li><a class="text-decoration-none" href="destination-mars.html">Mars</a></li>
+            <li><a class="text-decoration-none" href="destination-europa.html">Europa</a></li>
+            <li><a class="text-decoration-none" href="destination-titan.html">Titan</a></li>  
+          </ul>
+        </nav>
+        <h3>MOON</h3>
+        <p>
+          See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+          regain perspective and come back refreshed. While you’re there, take in some history 
+          by visiting the Luna 2 and Apollo 11 landing sites.
+        </p>
+        <div class="destination-info">
+          <div class="d-flex flex-column text-center mb-sm-4 info-distance">
+            <span class="info">Avg. distance</span>
+            <span class="data">384,400 KM</span> 
+          </div>
+          <div class="d-flex flex-column text-center">
+            <span class="info">Est. travel time</span>
+            <span class="data text-xl-start">3 DAYS</span>
           </div>
         </div>
       </div>
