@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url(/fonts/BarlowCondensed/BarlowCondensed-Regular.ttf);
+  font-weight: normal;
+}
+
+.technology-container {
+  background-image: url("../assets/technology/background-technology-mobile.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 5.5rem 0 0;
+
+  h2 {
+    margin-top: 0rem;
+    margin-bottom: 2.5rem;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+    text-align: center;
+    color: #fff;
+
+    span {
+      opacity: 0.6;
+    }
+  }
+}
+
+#carouselExampleCaptions {
+  .indicators-technology {
+    top: 23rem;
+    margin: 0 auto;
+    width: 150px;
+    max-width: 160px;
+
+    button:focus {
+      background-color: #fff;
+    }
+  }
+}
+
+.technology-content {
+  padding-left: 0;
+  padding-right: 0;
+
+  .carousel-item {
+    img {
+      width: 100%;
+      min-height: 10.6rem;
+      max-height: 19.5rem;
+    }
+
+    .carousel-caption {
+      margin-top: 5rem;
+      padding-left: 24px;
+      padding-right: 24px;
+
+      span {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 17px;
+        letter-spacing: 2.5px;
+        color: #d0d6f9;
+        opacity: 1;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p {
+        height: 110px;
+        margin-bottom: 0;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .technology-container {
+    background-image: url(/assets/technology/background-technology-tablet.jpg);
+
+    h2 {
+      margin-top: 7rem;
+    }
+  }
+}
+
+@include large {
+  .technology-container {
+    h2 {
+      margin-top: 13rem;
+    }
+  }
+
+  #carouselExampleCaptions {
+    .indicators-technology {
+      top: 26rem;
+    }
+  }
+}
+
+@include x-large {
+  .technology-container {
+    background-image: url("/assets/technology/background-technology-desktop.jpg");
+    padding-top: 20%;
+
+    h2 {
+      padding-left: 200px;
+      margin-top: -90px;
+      margin-bottom: 0;
+      text-align: left;
+      font-size: 1.75rem;
+    }
+  }
+
+  .technology-content {
+    #carouselExampleCaptions {
+      .carousel-indicators {
+        top: 32vw;
+        width: 7rem;
+        height: 1rem;
+        margin-left: 180px;
+
+        button {
+          width: 0.9rem;
+          height: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .technology-content {
+    .carousel-item {
+      width: 100%;
+      padding-left: 165px;
+      padding-right: 10px;
+
+      img {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        min-width: 30rem;
+        max-width: 33rem;
+        min-height: 33rem;
+        margin-top: 35px;
+      }
+
+      .carousel-caption {
+        width: 56%;
+        right: 0;
+        margin-top: 12%;
+        margin-bottom: 20%;
+        padding-top: 0;
+        text-align: left;
+
+        span {
+          font-size: 2rem;
+        }
+
+        h3 {
+          margin-top: 1.5rem;
+          margin-bottom: 2rem;
+          font-size: 3.5rem;
+          text-align: left;
+        }
+
+        p {
+          max-width: 73%;
+          font-size: 1.125rem;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
